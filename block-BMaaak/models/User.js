@@ -22,5 +22,10 @@ var articleSchema = new Schema({
 articleSchema.index({tags:1});
 articleSchema.index({ title: "text", description: "text" })
 
+$group:{
+    _id: "gender",
+    avgAge:{$avg : "$age"}
+}
+
 
 
