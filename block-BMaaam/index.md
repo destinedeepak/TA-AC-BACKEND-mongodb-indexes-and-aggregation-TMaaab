@@ -149,6 +149,14 @@ db.users.aggregate([
 
 27. Find all 18+ inactive men and return only the fields specified below in the below provided format
 
+db.users.aggregate([
+  {$match:{isActive:false, age:{$gt:18}}},
+  {$project:{
+    name:1,
+    email:'$company.email',
+    identity:{eye:'$eyeColor', phone:'$company.phone',location:'$location.country'}
+  }}
+]).pretty()
 ```js
 {
   name: "",
