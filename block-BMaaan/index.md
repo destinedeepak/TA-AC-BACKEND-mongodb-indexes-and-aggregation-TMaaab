@@ -24,4 +24,4 @@ Q2. Use aggregation framework to
 - Total answers count overall and question specific as well
 - Count total reputation of a user
 - total views on a particular day
-- Count total answer by a particular user
+- Count total answer by a particular user 
